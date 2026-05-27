@@ -63,10 +63,16 @@ image, question = env.get_prompt()         # image: PIL.Image, question: str
 
 # Score a model output (typically the raw text containing <answer>...</answer>)
 result = env.verify("<answer>W</answer>")
-# -> {"reward": 1.0, "format_score": 1, "accuracy": 1}
-# or {"reward": -0.5, "format_score": 1, "accuracy": 0}  on wrong answer
-# or {"reward":  0.0, "format_score": 0, "accuracy": 0}  on malformed output
+# -> {"reward":  1.0, "format_score": 1, "accuracy": 1}   correct
+# or {"reward": -0.5, "format_score": 1, "accuracy": 0}   wrong
+# or {"reward": -1.0, "format_score": 0, "accuracy": 0}   malformed output
 ```
+
+> **Tip for RL training.** For numeric / list-valued environments you may
+> want a continuous (shaped) wrong-answer reward instead of the default
+> `-0.5`. Set `env.shape_strategy = "auto"` (or the env var
+> `RLVE_SHAPE_STRATEGY=auto`) to enable partial credit on near-miss
+> numeric outputs.
 
 ### Iterate over a bucket
 
@@ -96,18 +102,11 @@ environment, draw `N` seeds per level, and emit `(image, prompt, answer)`
 rollouts via `env.generate(seed, {"level": L})` + `env.get_prompt()` /
 `env._answer`. Rewards during RL come from `env.verify(model_output)`.
 
-## Citation
+## Full release
 
-If you use these environments, please cite:
-
-```bibtex
-@article{yang2026tron,
-  title   = {{TRON}: Targeted Rule-Verifiable Online Environments for Visual Reasoning RL},
-  author  = {Yang, Tianze and Shi, Yucheng and Sun, Ruitong and Huang, Jingyuan and Liu, Ninghao and Sun, Jin},
-  year    = {2026},
-  note    = {University of Georgia}
-}
-```
+This repository contains the **environment code** only. The complete RL
+training pipeline and the trained model checkpoints (full model + the five
+per-bucket ability specialists) will be released upon paper acceptance.
 
 ## License
 
