@@ -58,21 +58,33 @@ env = ENVIRONMENTS["aquarium_grid"]()
 # Generate a fresh instance.  `parameter["level"]` is the difficulty (0-9).
 env.generate(seed=42, parameter={"level": 3})
 
-# Get the (image, question) pair fed to the VLM
+# Get the (image, question) pair fed to the VLM. The prompt also tells the
+# model which answer wrapper to use for this particular instance.
 image, question = env.get_prompt()         # image: PIL.Image, question: str
 
-# Score a model output (typically the raw text containing <answer>...</answer>)
-result = env.verify("<answer>W</answer>")
+# Score a model output. Pass the raw model response — verify() locates the
+# answer using the wrapper assigned to this seed.
+result = env.verify(model_output)
 # -> {"reward":  1.0, "format_score": 1, "accuracy": 1}   correct
 # or {"reward": -0.5, "format_score": 1, "accuracy": 0}   wrong
 # or {"reward": -1.0, "format_score": 0, "accuracy": 0}   malformed output
 ```
 
-> **Tip for RL training.** For numeric / list-valued environments you may
-> want a continuous (shaped) wrong-answer reward instead of the default
-> `-0.5`. Set `env.shape_strategy = "auto"` (or the env var
-> `RLVE_SHAPE_STRATEGY=auto`) to enable partial credit on near-miss
-> numeric outputs.
+### Answer wrappers
+
+Each instance is deterministically assigned one of three answer wrappers
+based on the seed (so a training run sees all three formats, but each
+individual prompt asks for exactly one):
+
+1. `<answer>X</answer>`
+2. `\boxed{X}`
+3. `Final answer: X` (on the last line)
+
+`env.get_prompt()` includes the wrapper instruction for the current seed
+in the question text. `env.verify()` is **strict**: it only accepts the
+wrapper that was requested — using the wrong wrapper counts as a format
+error, even if the underlying answer is numerically correct. This is
+intentional, to teach format obedience during RL training.
 
 ### Iterate over a bucket
 
