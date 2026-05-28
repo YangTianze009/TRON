@@ -3,10 +3,11 @@
 Environment code release for the paper
 **"TRON: Targeted Rule-Verifiable Online Environments for Visual Reasoning RL"**.
 
-**Authors** (\* = equal contribution):
-Tianze Yang\*, Yucheng Shi\*, Ruitong Sun, Jingyuan Huang, Ninghao Liu, Jin Sun
+**Authors:** Tianze Yang\*, Yucheng Shi\*, Ruitong Sun, Jingyuan Huang, Ninghao Liu, Jin Sun
 
 **Affiliation:** School of Computing, University of Georgia, Athens, GA, USA
+
+<sub>\* Equal contribution.</sub>
 
 ---
 
