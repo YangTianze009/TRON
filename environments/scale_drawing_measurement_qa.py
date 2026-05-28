@@ -207,11 +207,11 @@ class ScaleDrawingMeasurementQA(StandaloneVisualEnv):
         if len(distractors) < 3:
             return None
 
-        # 2026-05-04 WeMath alignment: 50% of seeds use the WeMath-style 5-way
+        # 2026-05-04 exam alignment: 50% of seeds use the exam-style 5-way
         # MCQ with E="No correct answer" trailing option (matches reference's
         # dominant surface format: "A. ...; B. ...; C. ...; D. ...; E. No
         # correct answer"). The other 50% keep the legacy 4-way letter MCQ.
-        wemath_style = rng.random() < 0.5
+        exam_style = rng.random() < 0.5
         opts_vals = [gt_val] + distractors[:3]
         rng.shuffle(opts_vals)
         if opts_vals.count(gt_val) > 1:
@@ -224,7 +224,7 @@ class ScaleDrawingMeasurementQA(StandaloneVisualEnv):
             return f"{v:.1f} {unit_real}"
 
         opt_strs = [fmt(v) for v in opts_vals]
-        if wemath_style:
+        if exam_style:
             # Append E="No correct answer" — gt_val is still in A-D so the
             # correct letter does not change.
             opt_strs = opt_strs + ["No correct answer"]

@@ -1,10 +1,10 @@
 """
 Transformation Composition QA environment.
 
-2026-05-05 R5 P1: REWRITTEN to match WeMath Basic Transformations of Figures
-benchmark verbatim style (Q1-Q20 from plan/research/wemath.md).
+2026-05-05 R5 P1: REWRITTEN to match a math benchmark Basic Transformations of Figures
+benchmark verbatim style (Q1-Q20 from plan/research/a math benchmark.md).
 
-WeMath phrasing patterns matched:
+a math benchmark phrasing patterns matched:
   - L0/L1 → Q1-style 2-option direction MCQ:
     "As shown in the diagram, shape B is shape A rotated 90° around point O ( ).
      A. Clockwise; B. Counterclockwise; C. Cannot be determined; D. No correct answer"
@@ -22,10 +22,10 @@ WeMath phrasing patterns matched:
      D. No correct answer"
     Ground truth: C
   - L8-L9 → Q12-style 2-step compound with tighter distractors + raised "No
-    correct answer" trap rate (40%) — WeMath samples don't have explicit
+    correct answer" trap rate (40%) — a math benchmark samples don't have explicit
     3-transform composition, so we keep 2-step but harder.
 
-Naming conventions follow WeMath:
+Naming conventions follow a math benchmark:
   - Single rotation: shape A / shape B / shape C, pivot called point O
   - Compound: Figure ① / Figure ②, pivots P / Q
   - Always grid-based with axes shown
@@ -75,22 +75,22 @@ class TransformationCompositionQA(StandaloneVisualEnv):
     ENV_NAME = "transformation_composition"
 
     QUESTION_TYPES = [
-        "wemath_q1_direction",          # L0/L1 — Q1 style 2-option direction
-        "wemath_q4q9_single_rotation",  # L2-L4 — Q4/Q9 style 4-5 option single rotation around point O
-        "wemath_q12_compound",          # L5-L9 — Q12 style 2-step compound rotate+translate
+        "exam_q1_direction",          # L0/L1 — Q1 style 2-option direction
+        "exam_q4q9_single_rotation",  # L2-L4 — Q4/Q9 style 4-5 option single rotation around point O
+        "exam_q12_compound",          # L5-L9 — Q12 style 2-step compound rotate+translate
     ]
 
     def _level_config(self, level: int) -> dict:
         level = max(0, min(level, 9))
         if level <= 1:
             return {
-                "qtype": "wemath_q1_direction",
+                "qtype": "exam_q1_direction",
                 # L0: simple shape (right triangle); L1: same with mild variety
                 "shape_pool": ["triangle"],
             }
         if level <= 4:
             return {
-                "qtype": "wemath_q4q9_single_rotation",
+                "qtype": "exam_q4q9_single_rotation",
                 # L2/L3: 4-option (Q9 style); L4: 5-option (Q4 style)
                 "use_5_options": (level == 4),
                 "shape_pool": ["triangle", "rectangle"],
@@ -98,7 +98,7 @@ class TransformationCompositionQA(StandaloneVisualEnv):
             }
         if level <= 7:
             return {
-                "qtype": "wemath_q12_compound",
+                "qtype": "exam_q12_compound",
                 "shape_pool": ["triangle", "rectangle"],
                 "use_5_options": False,  # Q12 itself is 4-option
                 "trap_rate": 0.20,
@@ -106,7 +106,7 @@ class TransformationCompositionQA(StandaloneVisualEnv):
             }
         # L8/L9 — same Q12 style but harder distractors + higher trap rate
         return {
-            "qtype": "wemath_q12_compound",
+            "qtype": "exam_q12_compound",
             "shape_pool": ["triangle", "rectangle", "l_shape"],
             "use_5_options": (level == 9),  # mix in 5-option at L9
             "trap_rate": 0.40,
@@ -122,9 +122,9 @@ class TransformationCompositionQA(StandaloneVisualEnv):
 
         qtype = cfg["qtype"]
         for _ in range(20):
-            if qtype == "wemath_q1_direction":
+            if qtype == "exam_q1_direction":
                 result = self._try_generate_q1_direction(cfg, sub_rng)
-            elif qtype == "wemath_q4q9_single_rotation":
+            elif qtype == "exam_q4q9_single_rotation":
                 result = self._try_generate_q4q9_single_rotation(cfg, sub_rng)
             else:
                 result = self._try_generate_q12_compound(cfg, sub_rng)
@@ -155,7 +155,7 @@ class TransformationCompositionQA(StandaloneVisualEnv):
         # Build option set — Q1 verbatim has 4 options:
         #   A. Clockwise; B. Counterclockwise;
         #   C. Cannot be determined; D. No correct answer
-        # Order is fixed in WeMath Q1; we keep the canonical order to match
+        # Order is fixed in a math benchmark Q1; we keep the canonical order to match
         # verbatim. Correct answer letter depends on true_dir.
         if true_dir == "CW":
             correct_letter = "A"

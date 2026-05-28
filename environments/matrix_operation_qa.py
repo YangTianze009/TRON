@@ -157,7 +157,7 @@ class MatrixOperationQA(StandaloneVisualEnv):
             a = str(val)
             imgs = ("triple", A, B, C)
         elif qt == "sum_all_3":
-            # reference D9 (qid 476, 477): "What is the sum of all elements
+            # reference D9 (an external reference, 477): "What is the sum of all elements
             # in the matrix A?"  Integer answer (3x3).
             s = sum(A[i][j] for i in range(n) for j in range(n))
             q = rng.choice([

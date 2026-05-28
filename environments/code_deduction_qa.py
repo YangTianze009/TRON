@@ -1,7 +1,7 @@
 """
 Code Deduction QA (D71, P1).
 
-Reference qid 313:
+Reference an external reference:
   "The statements on the right give clues to the identity of a three-digit
    code. What is the code?"  Ans: 275
 
@@ -35,7 +35,7 @@ class CodeDeductionQA(StandaloneVisualEnv):
     BENCHMARK_NUM_TOLERANCE_ABS = 0.001
     ENV_NAME = "code_deduction"
 
-    # 2026-05-04 R4: full-gradient redesign per dynamath qid 313 sample.
+    # 2026-05-04 R4: full-gradient redesign per a math benchmark an external reference sample.
     # Benchmark hardness: deduce N-digit code from natural-language clues.
     # Trivial clues (specific value, even/odd, sum) saturate easily — model
     # just enumerates. Real harder modes need:

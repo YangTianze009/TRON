@@ -2,7 +2,7 @@
 Prüfer code: given a small labelled tree (5–7 vertices), output the
 Prüfer code as a comma-separated bracketed list of vertex labels.
 
-Mirrors qid 258 wording from the source distribution:
+Mirrors an external reference wording from the source distribution:
   "Give the Prüfer code of the following graph. Please answer in the
    format like '[1, 2, 3, 4, 5]'.  Ans: [3, 2, 3, 3, 6]."
 
@@ -238,7 +238,7 @@ class PruferCodeQA(StandaloneVisualEnv):
         """Parse a bracketed comma-separated label sequence.
 
         Accepts both letter form (A, B, C) AND integer form (1-indexed:
-        A=1, B=2, ...). DynaMath qid 258 uses integer Prüfer codes; we
+        A=1, B=2, ...). a math benchmark an external reference uses integer Prüfer codes; we
         normalize predicted tokens against the ground-truth letter set
         by mapping integers→letters before comparison."""
         import re

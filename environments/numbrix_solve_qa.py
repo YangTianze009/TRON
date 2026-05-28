@@ -33,7 +33,7 @@ from PIL import Image
 from .standalone_base import StandaloneVisualEnv
 
 
-# Match MM-HELIX numbrix prompt verbatim (idx=841, idx=842):
+# Match a puzzle benchmark numbrix prompt verbatim (idx=841, idx=842):
 # - 6-item Game Rules (NOT 4) including the "not every empty cell needs to be
 #   filled" rule.
 # - Important Notes section.

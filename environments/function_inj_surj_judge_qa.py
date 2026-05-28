@@ -2,8 +2,8 @@
 Function Injective / Surjective Judgment QA (D7).
 
 Reference task:
-  qid 89 (UG MCQ): "Is the function injective? choice: (A) Yes (B) No." Ans: B.
-  qid 90 (UG MCQ): "Is the function surjective? choice: (A) Yes (B) No." Ans: A.
+  an external reference (UG MCQ): "Is the function injective? choice: (A) Yes (B) No." Ans: B.
+  an external reference (UG MCQ): "Is the function surjective? choice: (A) Yes (B) No." Ans: A.
 
 Renders an arrow diagram of f: X -> Y (small finite sets, mapped via arrows).
 Asks Yes/No whether the function is injective (1-1) or surjective (onto).
@@ -22,7 +22,7 @@ from PIL import Image
 from .standalone_base import StandaloneVisualEnv
 
 
-# Aligned with DynaMath D89/D90: MCQ format "(A) Yes (B) No", answer is letter A or B.
+# Aligned with a math benchmark D89/D90: MCQ format "(A) Yes (B) No", answer is letter A or B.
 _TEMPLATES_INJ = [
     "Is the function f shown in the diagram injective (one-to-one)? Choices: (A) Yes (B) No. Place the letter in your final answer.",
     "Examine the arrow diagram. Is f: X -> Y injective? Choices: (A) Yes (B) No. Place the letter in your final answer.",
@@ -115,7 +115,7 @@ class FunctionInjSurjJudgeQA(StandaloneVisualEnv):
 
         is_inj = len(set(mapping)) == len(mapping)
         is_surj = len(set(mapping)) == y_size
-        # MCQ letter: (A) Yes (B) No — matches DynaMath D89/D90 convention.
+        # MCQ letter: (A) Yes (B) No — matches a math benchmark D89/D90 convention.
         if qtype == "inj":
             answer = "A" if is_inj else "B"
             templates = _TEMPLATES_INJ

@@ -22,7 +22,7 @@ import matplotlib.patches as mpatches
 from PIL import Image
 
 from .standalone_base import StandaloneVisualEnv
-from ._mcq_letter_lib import maybe_to_wemath_mcq
+from ._mcq_letter_lib import maybe_to_unit_mcq
 
 _TEMPLATES = [
     "The compound shape is formed by rectangles as shown. Given the labeled dimensions, compute the total area. Put the numeric answer in <answer>...</answer>.",
@@ -98,10 +98,10 @@ class CompositeAreaDecompositionQA(StandaloneVisualEnv):
         answer = str(total)
         sidx = (self.seed or 0) % 16
         q = _TEMPLATES[sidx]
-        # 2026-05-04 WeMath alignment: 50% → 5-way MCQ with E="No correct
+        # 2026-05-04 exam alignment: 50% → 5-way MCQ with E="No correct
         # answer" + "cm²" unit (area).
         unit_rng = random.Random((self.seed or 0) * 17 + 7331)
-        q, answer = maybe_to_wemath_mcq(
+        q, answer = maybe_to_unit_mcq(
             q, answer, unit_rng, prob=0.5, unit="cm²", n_options=5)
         return q, answer, img
 

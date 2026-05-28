@@ -1,7 +1,7 @@
 """
 Instrument Panel QA (D77, P3).
 
-Reference qid 311:
+Reference an external reference:
   "A ticket will be issued when the vehicle speed exceeds 70 mph. According
    to the instrument panel below, will this vehicle get the ticket?
    choice: (A) Yes (B) No."  Ans: A

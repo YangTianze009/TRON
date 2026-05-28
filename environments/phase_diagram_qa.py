@@ -4,7 +4,7 @@ Phase Diagram QA environment.
 Draws P-T phase diagrams with solid/liquid/gas regions, triple point,
 critical point, and phase boundary curves. Questions about phase
 identification, transitions, and special points.
-Targets: MMStar science diagrams, MMMU chemistry/physics.
+Targets: a multimodal benchmark science diagrams, MMMU chemistry/physics.
 """
 
 import math

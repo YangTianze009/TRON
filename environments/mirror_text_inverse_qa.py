@@ -1,7 +1,7 @@
 """
 Mirror Text Inverse QA (D82, P3 — reference scientific figure).
 
-Reference qid 263:
+Reference an external reference:
   "An inverse expression is placed near a mirror. The mirror shows its
    original appearance, but due to the ink dot on the mirror, part of
    the formula is obscured. Find the value of '?' in this expression."

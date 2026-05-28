@@ -115,7 +115,7 @@ class ContourRegionAreaQA(StandaloneVisualEnv):
         if sorted_vals[-1] - sorted_vals[-2] < 0.15 * sorted_vals[-1]:
             return None
 
-        # CharXiv X24 uses BOTH `left/middle/right` (IDX 977) and
+        # a chart benchmark X24 uses BOTH `left/middle/right` (IDX 977) and
         # `first/second/third` (IDX 576). Alternate by seed bit so training
         # sees both vocabularies. (Subplots are letter-labelled (a)/(b)/(c)
         # to avoid leaking the position word in the title.)

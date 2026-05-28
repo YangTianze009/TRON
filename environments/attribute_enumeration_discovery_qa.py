@@ -2,7 +2,7 @@
 Attribute Enumeration Discovery QA environment (v3 diversity redesign, 2026-04-16).
 
 Goal: given N figures, enumerate candidate attributes and pick the one that
-partitions the figures into two groups. Targets VisuLogic Attribute
+partitions the figures into two groups. Targets a logic benchmark Attribute
 Reasoning.
 
 v3 diversity redesign:

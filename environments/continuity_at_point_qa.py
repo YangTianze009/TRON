@@ -2,7 +2,7 @@
 Continuity At Point Judgment QA (D17-add).
 
 Reference task:
-  qid 79 (UG MCQ): "Is the function continuous at x = 0? choice: (A) Yes
+  an external reference (UG MCQ): "Is the function continuous at x = 0? choice: (A) Yes
    (B) No." Ans: A.
 
 Renders a function curve on a plot with a marked vertical line at x = c.

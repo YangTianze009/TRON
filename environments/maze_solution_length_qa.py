@@ -1,7 +1,7 @@
 """
 Maze Solution Length QA (batch 3, 2026-04-14).
 
-Target: reference games / SpatialEval mazenav + VGRPBench. Renders a small
+Target: reference games / a spatial benchmark mazenav + a puzzle benchmark. Renders a small
 grid maze with walls, start (S), and goal (G). Asks for the minimum path
 length (in cells stepped on excluding start, or BFS distance).
 

@@ -1,7 +1,7 @@
 """
 Attribute Grouping Metalist QA environment.
 
-Targets VisuLogic Attribute Reasoning.
+Targets a logic benchmark Attribute Reasoning.
 
 Shows 6 simple line-art figures arranged in a 2×3 grid, numbered ①–⑥.
 The model must find the single attribute (drawn from a meta-list such as

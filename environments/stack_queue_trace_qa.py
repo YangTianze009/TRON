@@ -1,7 +1,7 @@
 """
 Stack / Queue Trace QA (v3 planning batch, 2026-04-16).
 
-Target: reference algorithm_problems / VisualPuzzles algorithmic.
+Target: reference algorithm_problems / a puzzle benchmark algorithmic.
 Renders a stack (vertical LIFO) or a queue (horizontal FIFO), or both,
 with a sequence of operations (push / pop / enqueue / dequeue) drawn as
 a numbered list alongside the structure.

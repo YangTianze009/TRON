@@ -23,7 +23,7 @@ import matplotlib.patches as mpatches
 from PIL import Image
 
 from .standalone_base import StandaloneVisualEnv
-from ._mcq_letter_lib import maybe_to_wemath_mcq
+from ._mcq_letter_lib import maybe_to_unit_mcq
 
 _TEMPLATES = [
     "The photograph shows a ruler alongside a {object}. What is the {object}'s {quantity} in {unit}? Round to 1 decimal place; put in <answer>...</answer>.",
@@ -79,10 +79,10 @@ class PhotoMeasurementEstimateQA(StandaloneVisualEnv):
         q = _TEMPLATES[sidx].format(object=obj, quantity=quantity, unit=unit)
 
         img = self._render_ruler(length_units, obj, rng)
-        # 2026-05-04 WeMath alignment: 50% → 5-way MCQ with E="No correct
+        # 2026-05-04 exam alignment: 50% → 5-way MCQ with E="No correct
         # answer" + "cm" unit (length).
         unit_rng = random.Random((self.seed or 0) * 17 + 2999)
-        q, answer = maybe_to_wemath_mcq(
+        q, answer = maybe_to_unit_mcq(
             q, answer, unit_rng, prob=0.5, unit="cm", n_options=5)
         return q, answer, img
 

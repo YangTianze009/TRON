@@ -2,7 +2,7 @@
 Right Triangle Median to Hypotenuse QA (D62).
 
 Reference task:
-  qid 38 (HS float): "As shown in the figure, in the right triangle ABC,
+  an external reference (HS float): "As shown in the figure, in the right triangle ABC,
    ∠ACB = 90°, D is the midpoint of AB, and AB = 5. What is the length of
    CD?" Ans: 2.5.
 
@@ -35,7 +35,7 @@ _TEMPLATES = [
     "In right triangle ABC with right angle at C, D is the midpoint of AB and AB = {AB}. Determine CD.",
 ]
 
-# 2026-05-04 R4: full-gradient redesign per mmmath. Compound mode (L6+):
+# 2026-05-04 R4: full-gradient redesign per a math benchmark. Compound mode (L6+):
 # given the two LEGS, model must (1) compute hypotenuse via Pythagoras
 # then (2) apply CD = AB/2.
 _TEMPLATES_LEGS = [
@@ -54,7 +54,7 @@ class RightTriangleMedianQA(StandaloneVisualEnv):
     BENCHMARK_NUM_TOLERANCE_ABS = 0.001
 
     def _level_config(self, level: int) -> Dict:
-        # 2026-05-04 R4: full-gradient redesign per mmmath.
+        # 2026-05-04 R4: full-gradient redesign per a math benchmark.
         # L0-L1: trivial AB integer multiples of 4 (CD = whole int)
         # L2-L3: AB integer odd (CD = .5)
         # L4-L5: AB any int 3..20 (CD whole or .5)

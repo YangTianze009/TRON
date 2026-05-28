@@ -2,8 +2,8 @@
 Shape Counting Analogy QA environment (batch 2 Part B, 2026-04-14).
 
 Goal: conditional counting with attribute filters. "How many blue
-triangles are there, if we exclude big ones?" Targets VisuLogic Attribute
-Reasoning, VisualPuzzles analogical, VisuLogic Quantitative
+triangles are there, if we exclude big ones?" Targets a logic benchmark Attribute
+Reasoning, a puzzle benchmark analogical, a logic benchmark Quantitative
 Reasoning.
 
 Difficulty axes:
@@ -47,7 +47,7 @@ class ShapeCountingAnalogyQA(StandaloneVisualEnv):
     ENV_NAME = "shape_counting_analogy"
 
     def _level_config(self, level: int) -> Dict:
-        # 2026-05-04 R4: full-gradient redesign per visulogic attribute reasoning.
+        # 2026-05-04 R4: full-gradient redesign per a logic benchmark attribute reasoning.
         # L0: trivial single-attribute (3 shapes, 5 figures, 1 condition, no size)
         # L1-L2: 6-7 figures, color-or-shape filter (1 cond)
         # L3-L4: 8-9 figures, color+shape filter (2 cond), introduces size

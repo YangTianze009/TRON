@@ -2,7 +2,7 @@
 Lattice in Disk Count QA (D11).
 
 Reference task:
-  qid 213 (UG float): "Find the number of integer solutions of x²+y² <= 16."
+  an external reference (UG float): "Find the number of integer solutions of x²+y² <= 16."
   Ans: 49.
 
 Renders a disk x^2 + y^2 <= R^2 on a coordinate grid with integer lattice
@@ -86,7 +86,7 @@ class LatticeInDiskCountQA(StandaloneVisualEnv):
         ax.add_patch(circle)
         # Lattice points — uniform color so model must count, not just spot
         # red dots. Showing inside vs outside in different colors leaks the
-        # answer (just count the red ones). Aligned with DynaMath D213 which
+        # answer (just count the red ones). Aligned with a math benchmark D213 which
         # is largely a math task with the disk shown for orientation.
         pad = max(2, R // 2)
         for x in range(-R - pad, R + pad + 1):

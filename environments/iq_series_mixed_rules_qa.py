@@ -235,7 +235,7 @@ class IQSeriesMixedRulesQA(StandaloneVisualEnv):
                 opts.append(d)
             if len(opts) == 5:
                 break
-        # Top up if we don't have 5 yet (LogicVista sequence pattern uses A-E)
+        # Top up if we don't have 5 yet (a logic benchmark sequence pattern uses A-E)
         tries = 0
         while len(opts) < 5 and tries < 60:
             tries += 1

@@ -153,7 +153,7 @@ _QUESTION_TEMPLATES = {
 class MultiTableJoinQA(StandaloneVisualEnv):
     ENV_NAME = "multi_table_join"
 
-    # 2026-05-04 R4: full-gradient redesign per chartqapro multi-table samples.
+    # 2026-05-04 R4: full-gradient redesign per a chart benchmark multi-table samples.
     # Original gradient was monotonic qtype change but n_items barely moved
     # (3,3,4,4,4,5,5,6,6,4) — saturated because L7 (6 items + double_filter)
     # is no harder than L4 (4 items + product). Real progressive gradient:

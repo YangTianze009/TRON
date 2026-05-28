@@ -1,6 +1,6 @@
 """
 Matrix number pattern QA — find missing value in NxN grid following arithmetic rules.
-Targets: VisualPuzzles algorithmic, visual-perception IQ_Test, MMStar logical reasoning.
+Targets: a puzzle benchmark algorithmic, visual-perception IQ_Test, a multimodal benchmark logical reasoning.
 Capabilities: V10 (counting), R1 (arithmetic), R5 (pattern reasoning)
 """
 import random, math

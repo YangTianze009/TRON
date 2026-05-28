@@ -1,7 +1,7 @@
 """
 Sliding Sum Blanks QA (D73, P1).
 
-Reference qid 312:
+Reference an external reference:
   "The sum of numbers on three consecutive underlines is always 10. Find
    the number on the red underlines."  Ans: 7
 
@@ -28,11 +28,11 @@ class SlidingSumBlanksQA(StandaloneVisualEnv):
     ENV_NAME = "sliding_sum_blanks"
 
     def _level_config(self, level: int) -> Dict:
-        # DynaMath qid 312 uses window=3 ("sum of three consecutive
+        # a math benchmark an external reference uses window=3 ("sum of three consecutive
         # underlines"). Match that; difficulty is varied via strip length and
         # the number of revealed entries.
         # 2026-05-04 R3: softened — was n_cells up to 10 with only 3 revealed
-        # at L9 (passrate broke L0=0.3 L9=0.2). The DynaMath wording "consecutive
+        # at L9 (passrate broke L0=0.3 L9=0.2). The a math benchmark wording "consecutive
         # underlines" is unfamiliar — even L0 confused the model. Reduce strip
         # length at higher levels and reveal a couple more cells so the
         # window-invariant pattern is more visible.
@@ -95,11 +95,11 @@ class SlidingSumBlanksQA(StandaloneVisualEnv):
         target = rng.choice(unrevealed)
         target_val = strip[target]
 
-        # Match DynaMath qid 312 wording: "The sum of numbers on three
+        # Match a math benchmark an external reference wording: "The sum of numbers on three
         # consecutive underlines is always {S}. Find the number on the red
         # underlines."
         # 2026-05-04 R3: added explicit hint about repetition pattern. The
-        # bare DynaMath wording was confusing (L0=0.3). The hint preserves the
+        # bare a math benchmark wording was confusing (L0=0.3). The hint preserves the
         # benchmark style but spells out that values repeat with period=window.
         question = (
             f"The image shows a row of underlines, each holding a positive "
@@ -140,7 +140,7 @@ class SlidingSumBlanksQA(StandaloneVisualEnv):
             return False
 
     def _render(self, strip, revealed_set, target, sum_total, window) -> Image.Image:
-        # Match DynaMath qid 312 figure: a horizontal strip of underlines.
+        # Match a math benchmark an external reference figure: a horizontal strip of underlines.
         # Revealed entries display the number above the underline; unrevealed
         # entries are blank above the underline; the target underline is red.
         n = len(strip)

@@ -1,7 +1,7 @@
 """
 Sliding (15-)Puzzle — structured-puzzle style game.
 
-Rules (matching MM-HELIX slidingpuzzle benchmark):
+Rules (matching a puzzle benchmark slidingpuzzle benchmark):
   - 4x4 grid with tiles 1..15 plus one empty cell (0).
   - On each move, slide a tile orthogonally adjacent to the empty cell
     INTO the empty cell.

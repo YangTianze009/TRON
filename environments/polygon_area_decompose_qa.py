@@ -32,7 +32,7 @@ import matplotlib.patches as mpatches
 from PIL import Image
 
 from .standalone_base import StandaloneVisualEnv
-from ._mcq_letter_lib import maybe_to_wemath_mcq
+from ._mcq_letter_lib import maybe_to_unit_mcq
 
 _TITLE_VARIANTS = [
     "Find the area",
@@ -129,7 +129,7 @@ class PolygonAreaDecomposeQA(StandaloneVisualEnv):
                 if result is not None:
                     self._primary_complexity_feature = level * 5 + len(result[1])
                     q, ans_str, img = result
-                    q, ans_str = self._wemath_wrap(q, ans_str)
+                    q, ans_str = self._unit_wrap(q, ans_str)
                     return q, ans_str, img
             except Exception:
                 continue
@@ -192,10 +192,10 @@ class PolygonAreaDecomposeQA(StandaloneVisualEnv):
     def _sub_rng(self, level: int) -> random.Random:
         return random.Random((self.seed or 0) * 1000 + level * 37 + 991)
 
-    def _wemath_wrap(self, q, ans_str):
-        """2026-05-04 WeMath alignment: 50% of seeds convert bare-numeric
+    def _unit_wrap(self, q, ans_str):
+        """2026-05-04 exam alignment: 50% of seeds convert bare-numeric
         area question to 5-way MCQ with E="No correct answer" + cm² unit.
-        Adds <answer> tag first so the strip in maybe_to_wemath_mcq has a
+        Adds <answer> tag first so the strip in maybe_to_unit_mcq has a
         clean handle."""
         # Strip the trailing "Answer with..." sentence and add <answer> tag
         # so the helper can cleanly drop it when converting.
@@ -204,7 +204,7 @@ class PolygonAreaDecomposeQA(StandaloneVisualEnv):
         if "<answer>" not in q:
             q = q + " Place the answer in <answer>...</answer>."
         unit_rng = random.Random((self.seed or 0) * 17 + 4093)
-        return maybe_to_wemath_mcq(
+        return maybe_to_unit_mcq(
             q, ans_str, unit_rng, prob=0.5, unit="cm²", n_options=5)
 
     def _dispatch(self, level: int):

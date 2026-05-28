@@ -2,7 +2,7 @@
 Ternary Plot QA (D123, P3).
 
 Reference task:
-  qid 295 (UG MCQ): "The ternary plot shows the three-sector model of an
+  an external reference (UG MCQ): "The ternary plot shows the three-sector model of an
    unknown country. Which sector contributes most to the economy of this
    country? choice: (A) Primary Sector (B) Secondary Sector (C) Tertiary
    Sector." Ans: B.

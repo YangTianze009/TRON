@@ -6,7 +6,7 @@ visual rule: arrows in a row rotate consistently, columns alternate, all
 arrows point the same way, etc. One cell is left blank; the model picks
 the missing arrow from {↗, ↖, ↘, ↙} or {N, S, E, W}.
 
-Reference qid 340:
+Reference an external reference:
   "Determine the missing part. Choice: (A) ↗ (B) ↖ (C) ↘ (D) ↙." Ans: A.
 
 Output: single MCQ letter A/B/C/D.

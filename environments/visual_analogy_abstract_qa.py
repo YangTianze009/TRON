@@ -5,7 +5,7 @@ Goal: train abstract analogical reasoning of the form A:B :: C:? where
 A, B, C, D are all abstract synthetic shapes and the relation is a formal
 transformation (rotate, scale, reflect, add hole, toggle fill, split,
 etc.). This targets the A1 (visual analogy) + X5 (symbolic reasoning)
-atomic capabilities and specifically addresses the VisualPuzzles /
+atomic capabilities and specifically addresses the a puzzle benchmark /
 analogical regression for the abstract-shape sub-type.
 
 Unlike the existing `visual_analogy` env which mixes concrete attributes,
@@ -30,7 +30,7 @@ Difficulty (level 0-9):
         Distractors apply ONLY ONE of the two rules (the hardest kind of
         distractor — you have to verify BOTH transformations were applied).
 
-Fix target: VisualPuzzles / analogical (abstract '==' matrices sub-type).
+Fix target: a puzzle benchmark / analogical (abstract '==' matrices sub-type).
 """
 import math
 import random

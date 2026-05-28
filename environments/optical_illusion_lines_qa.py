@@ -2,11 +2,11 @@
 Optical Illusion Lines QA (D61).
 
 Reference task:
-  qid 208 (HS MCQ): "Are three lines in figure the same length? choices: (A)
+  an external reference (HS MCQ): "Are three lines in figure the same length? choices: (A)
    Yes (B) No." Ans: A.
-  qid 209 (HS MCQ): "Is the distance between the two orange lines as long as
+  an external reference (HS MCQ): "Is the distance between the two orange lines as long as
    the distance between the two purple lines? choices: (A) Yes (B) No." Ans: A.
-  qid 210 (HS MCQ): "Are the red line and the blue line the same length?
+  an external reference (HS MCQ): "Are the red line and the blue line the same length?
    choices: (A) Yes (B) No." Ans: A.
 
 Renders an optical-illusion configuration where two or more lines look

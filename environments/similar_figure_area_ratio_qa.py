@@ -72,7 +72,7 @@ class SimilarFigureAreaRatioQA(StandaloneVisualEnv):
     TEXTBOOK_POSTPROCESS = True  # v4 B1: textbook-scan filter (~30% of rollouts)
 
     def _level_config(self, level: int) -> Dict:
-        # 2026-05-04 R4: full-gradient redesign per mmmath similarity-of-shapes.
+        # 2026-05-04 R4: full-gradient redesign per a math benchmark similarity-of-shapes.
         # L0-L1: rect/square only, simple ratio (1:2, 1:3), ASK RATIO
         # L2-L3: + triangle, simple ratios, ASK AREA
         # L4-L5: + polygons, mid ratios, ASK AREA

@@ -120,7 +120,7 @@ class AnalyticGeometryVisualQA(StandaloneVisualEnv):
     BENCHMARK_NUM_TOLERANCE_REL = 0.01
     ENV_NAME = "analytic_geometry_visual"
 
-    # 2026-05-04 R4: full-gradient redesign per dynamath analytic geom samples.
+    # 2026-05-04 R4: full-gradient redesign per a math benchmark analytic geom samples.
     # Five qtypes (slope, distance, midpoint, intersection, tangent) but
     # gradient was just chunking them into level bands. Real progressive:
     #   - Each level adds one MORE qtype to mix

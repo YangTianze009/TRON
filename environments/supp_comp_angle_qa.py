@@ -53,7 +53,7 @@ _TEMPLATES_COMP = [
     "Find the angle marked '?' in the figure: it forms a 90-degree corner together with the labeled angle. Place the integer answer in <answer>...</answer>.",
 ]
 
-# 2026-05-04 R4: full-gradient redesign per mmmath (supp+comp chain).
+# 2026-05-04 R4: full-gradient redesign per a math benchmark (supp+comp chain).
 # COMPOUND mode (L6-L9): two-step angle chain.
 # Forms (rendered as one labeled angle X°; model computes the chain answer):
 #   "supp_of_comp"  : 180 - (90 - X) = 90 + X
@@ -77,7 +77,7 @@ class SuppCompAngleQA(StandaloneVisualEnv):
     ENV_NAME = "supp_comp_angle"
 
     def _level_config(self, level: int) -> Dict:
-        # 2026-05-04 R4: full-gradient redesign per mmmath supp+comp chain.
+        # 2026-05-04 R4: full-gradient redesign per a math benchmark supp+comp chain.
         # L0-L1: SUPP only, multiples of 10 → trivial 1-step (180-X)
         # L2-L3: SUPP+COMP, multiples of 5
         # L4-L5: SUPP+COMP, integer non-5 (mid arithmetic)

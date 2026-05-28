@@ -3,7 +3,7 @@ Visual Analogy Raven 3x3 QA environment (batch 2 Part B, 2026-04-14).
 
 Goal: 3x3 Raven-style matrix completion. 8 cells filled, bottom-right is
 the unknown. The task is to pick the 9th cell from 4 options. Targets
-VisualPuzzles analogical, visual-perception IQ_Test, PuzzleVQA.
+a puzzle benchmark analogical, visual-perception IQ_Test, a puzzle benchmark.
 
 Difficulty axes:
   A) Pattern C n_rules_composed (1..3).

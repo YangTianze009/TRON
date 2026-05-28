@@ -1,7 +1,7 @@
 """
 Clock Elapsed Minutes QA (D36, P1).
 
-Reference qid 343 — minutes between two clocks.
+Reference an external reference — minutes between two clocks.
 
 Renders two analog clocks side by side showing different times. Asks for
 the elapsed minutes between them.

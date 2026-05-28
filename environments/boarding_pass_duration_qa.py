@@ -1,7 +1,7 @@
 """
 Boarding Pass Duration QA (D46, P1).
 
-Reference qid 316 — load-bearing failure.
+Reference an external reference — load-bearing failure.
 
 Renders a boarding pass-style image with departure time and arrival time
 shown. Asks for the flight duration in minutes.
@@ -33,7 +33,7 @@ class BoardingPassDurationQA(StandaloneVisualEnv):
     # Tighten to match.
     BENCHMARK_NUM_TOLERANCE_ABS = 0.001
 
-    # 2026-05-04 R4: full-gradient redesign per dynamath qid 316 sample.
+    # 2026-05-04 R4: full-gradient redesign per a math benchmark an external reference sample.
     # Benchmark hardness: time-arithmetic + cross-day rollover + multi-leg /
     # timezone reasoning. Single-segment same-day arithmetic is L0 territory;
     # benchmark-grade questions need rollover + timezone + multi-leg layovers.

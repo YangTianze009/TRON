@@ -4,11 +4,11 @@ Kinematics Graph QA (D86-D90, P1).
 Targets reference scientific-figure templates D86 through D90 + D94 (impulse).
 
 Reference task:
-  qid 266 (D86): "v vs t graph ... At which time the car change the direction
+  an external reference (D86): "v vs t graph ... At which time the car change the direction
                  to drive?"  Ans: 3       (= time when v(t) crosses zero)
-  qid 269 (D89): "Starting from rest at t=0 ... acceleration ... speed at
+  an external reference (D89): "Starting from rest at t=0 ... acceleration ... speed at
                  t=10s?"   Ans: 40.0     (= ∫₀¹⁰ a dt)
-  qid 274 (D94): "force-versus-time graph ... impulse?"   Ans: 60   (= ∫F dt)
+  an external reference (D94): "force-versus-time graph ... impulse?"   Ans: 60   (= ∫F dt)
 
 Subtypes (cycle through):
   - vt_change_direction : when does v(t) cross zero (sign change)?

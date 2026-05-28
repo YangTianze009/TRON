@@ -1,7 +1,7 @@
 """
 Sudoku Visual QA (D67, P0 — port from RLVE_Visual, adapted for reference).
 
-Reference qid 283:
+Reference an external reference:
   "Fill in the white space to make it like a 5x5 sudoku."  Ans: 4
 
 This env renders a partial Sudoku-style grid where every row and every
@@ -12,7 +12,7 @@ Note on grid sizes:
 - 5×5 is the canonical reference size. Since 5 is prime, a 5×5 cannot
   be subdivided into N×M subgrids — so a 5x5 puzzle uses **rows-and-
   columns only** (i.e., a Latin square, no subgrid lines). This matches
-  the qid 283 figure.
+  the an external reference figure.
 - 4×4 (2×2 subgrids) and 6×6 (2×3 subgrids) are also offered as
   warm-up / variant levels.
 
@@ -85,7 +85,7 @@ class SudokuVisualQA(StandaloneVisualEnv):
     def _level_config(self, level: int) -> Dict:
         """Difficulty schedule.
 
-        DynaMath qid 283 uses a 5×5 Latin-square (no subgrids). Match that
+        a math benchmark an external reference uses a 5×5 Latin-square (no subgrids). Match that
         format across all levels; difficulty is varied by adding extra
         blanks (still uniquely deducible from the target's row/col).
         """
@@ -134,7 +134,7 @@ class SudokuVisualQA(StandaloneVisualEnv):
             for (i, j) in extras[:extra_blanks_n]:
                 display[i][j] = 0
 
-        # 2026-05-04: was trimmed to verbatim DynaMath wording → 3% passrate
+        # 2026-05-04: was trimmed to verbatim a math benchmark wording → 3% passrate
         # (model can't find target without explicit guidance). Adds rule
         # explanation + cell location hint at L0-L4 for learning signal;
         # L5+ revert to verbatim benchmark wording.
@@ -194,7 +194,7 @@ class SudokuVisualQA(StandaloneVisualEnv):
                             fontweight="bold", color="#2c3e50")
 
         # Lines: thick subgrid borders only when use_subgrids; otherwise
-        # all internal lines are thin (Latin square style, like qid 283).
+        # all internal lines are thin (Latin square style, like an external reference).
         for i in range(0, NM + 1):
             if use_subgrids:
                 lw = 2.5 if i % N == 0 else 0.5

@@ -1,5 +1,5 @@
 """
-Hexagon Size Comparison QA (Task C, PuzzleVQA shape_size_hexagon gap, ).
+Hexagon Size Comparison QA (Task C, a puzzle benchmark shape_size_hexagon gap, ).
 
 Show hexagons of different sizes with labels, ask comparison or ordering.
 

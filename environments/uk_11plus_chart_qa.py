@@ -156,7 +156,7 @@ class UK11PlusChartQA(StandaloneVisualEnv):
         # does lowercased exact-match — bare numeric outputs would never score).
         # Falls back to numeric only if distractor generation fails (e.g. when
         # the correct value is exactly 0 — currently no generator produces 0).
-        # 2026-05-04: LogicVista benchmark always 5 options A-E with E=
+        # 2026-05-04: a logic benchmark benchmark always 5 options A-E with E=
         # "Cannot say" trap. ~15% trap rate.
         if result is not None:
             q, ans, img = result

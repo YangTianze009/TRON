@@ -2,9 +2,9 @@
 Omitted Operator QA (D4).
 
 Reference task:
-  qid 500/501 (ES MCQ): "Which operation is omitted in the equation as shown
+  an external reference (ES MCQ): "Which operation is omitted in the equation as shown
    in the image? Choices: (A) + (B) - (C) * (D) /." Ans: C.
-  qid 25 (ES MCQ): "What is the missing computed symbol? Choices: (A) + (B)
+  an external reference (ES MCQ): "What is the missing computed symbol? Choices: (A) + (B)
    - (C) * (D) /." Ans: A.
 
 Renders a 3-term equation like  a [op] b = c  with the operator hidden by a
@@ -48,7 +48,7 @@ _TEMPLATES = [
 _OP_TO_LETTER = {"+": "A", "-": "B", "*": "C", "/": "D"}
 _LETTER_TO_OP = {v: k for k, v in _OP_TO_LETTER.items()}
 
-# 2026-05-04 R4: full-gradient redesign per mme_reasoning.
+# 2026-05-04 R4: full-gradient redesign per a reasoning benchmark.
 # Two-hidden-op MCQ choices: 16 ordered pairs of operators map to A/B/C/D/E
 # in a randomly-chosen 4-of-16 pool. The image displays "a [□] b [□] c = d";
 # the model must pick the correct (op1, op2) pair from the listed options.
@@ -60,7 +60,7 @@ class OmittedOperatorQA(StandaloneVisualEnv):
     ENV_NAME = "omitted_operator"
 
     def _level_config(self, level: int) -> Dict:
-        # 2026-05-04 R4: full-gradient redesign per mme_reasoning.
+        # 2026-05-04 R4: full-gradient redesign per a reasoning benchmark.
         # L0-L1: trivial single-op +/- only, max_val=5
         # L2-L3: standard +/- with multiplication, max_val=12
         # L4-L5: full 4-op single-hidden, max_val=20

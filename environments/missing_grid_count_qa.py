@@ -2,7 +2,7 @@
 Missing Grid Count QA environment.
 
 Goal: train counting of MISSING items in a regular grid pattern. Targets
-MathVision.counting subtasks like "How many bricks are missing in the wall?"
+a math benchmark subtasks like "How many bricks are missing in the wall?"
 (idx=7) — none of the existing 29 count envs train this inverse-counting
 ability (they all count present items; this one counts absences).
 
@@ -14,7 +14,7 @@ items are missing.
 Why "missing-counting" is a distinct skill: counting present items requires
 attending to "salient figures"; counting missing items requires inferring an
 expected complete pattern and comparing it to what's visible. Reference
-benchmark question (MathVision idx=7) shows this is a real failure mode for
+benchmark question (a math benchmark idx=7) shows this is a real failure mode for
 4B-class VL models.
 
 Level design (parameter["level"], 0-9). Difficulty = grid size + missing

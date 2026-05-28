@@ -3,7 +3,7 @@ Logical Negation Chain QA environment (v3 planning, env #60).
 
 Goal: track truth values through a chain of implications with optional
 negation operators, rendered as a flow diagram of labelled boxes and
-arrows. Targets reference deductive, VisualPuzzles
+arrows. Targets reference deductive, a puzzle benchmark
 deductive and X5 (deductive symbolic reasoning).
 
 Difficulty axes (per spec):

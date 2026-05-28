@@ -487,7 +487,7 @@ class StandaloneVisualEnv(ABC):
         # one this seed's prompt asked for. Was previously permissive (any of
         # 3 wrappers). User caught the bug: "prompt asks for \boxed but model
         # uses <answer> and verify still passes" — model never learns to obey
-        # format instruction. LogicVista infographic -20.83 was caused by
+        # format instruction. a logic benchmark infographic -20.83 was caused by
         # this kind of format mismatch in the opposite direction.
         wrapper_idx = (self.seed or 0) % len(self._WRAPPER_INSTRUCTIONS)
         # Define each wrapper's extractor as a lambda over `output` that

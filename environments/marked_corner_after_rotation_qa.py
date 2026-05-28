@@ -5,7 +5,7 @@ rotating the whole figure by N degrees (90 / 180 / 270; 45 at higher
 levels, with 8-corner template), pick the option (A/B/C/D) where the
 marker ends up in the corresponding corner.
 
-Mirrors qid 189 visual style: the question shows a model object on the
+Mirrors an external reference visual style: the question shows a model object on the
 left and 4 options on the right; the model is depicted unrotated, the
 options show post-rotation candidates and the dot has been moved by
 either the correct rotation amount or a wrong amount.
@@ -132,7 +132,7 @@ class MarkedCornerAfterRotationQA(StandaloneVisualEnv):
         # The "model" panel shows the figure in its initial orientation with
         # the dot at init_corner; the option panels each show the figure
         # rotated by the angle but with the marker placed at the candidate
-        # corner. (This reflects qid 189: "five possible rotations".)
+        # corner. (This reflects an external reference: "five possible rotations".)
         img = self._render(K, init_corner, chosen, angle, direction, rng)
         return q, answer, img
 

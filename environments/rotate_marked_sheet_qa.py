@@ -1,7 +1,7 @@
 """
 Rotate Marked Sheet QA (D59, P3 — reference plane geometry).
 
-Reference qid 127:
+Reference an external reference:
   "The ♠ is drawn on the sheet. We turn the sheet clockwise through 90°
    and then turn counter-clockwise 180°. Which figure can we now see?
    choice: (A) (B) (C) (D)."  Ans: D

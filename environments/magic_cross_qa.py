@@ -6,7 +6,7 @@ vertically, sharing one center circle. The sum of all circles on each arm
 (or each line) is given. Some peripheral circles are revealed; the model finds
 the missing center value (or, occasionally, a missing peripheral value).
 
-Reference qid 115:
+Reference an external reference:
   "The sum of the three numbers on each of the two lines of the cross is 83.
    Find the number in the center." Ans: 8.
 

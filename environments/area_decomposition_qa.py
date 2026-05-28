@@ -22,7 +22,7 @@ import matplotlib.patches as mpatches
 from PIL import Image
 
 from .standalone_base import StandaloneVisualEnv
-from ._mcq_letter_lib import maybe_to_wemath_mcq
+from ._mcq_letter_lib import maybe_to_unit_mcq
 
 class AreaDecompositionQA(StandaloneVisualEnv):
     ENV_NAME = "area_decomposition"
@@ -138,14 +138,14 @@ class AreaDecompositionQA(StandaloneVisualEnv):
         # blank (or shows a brief prompt).
         image = self._render(rects, tri_info, semi_info, cfg,
                              given_text, ask_text, [])
-        # Add <answer> tag to the bare-numeric form so maybe_to_wemath_mcq can
+        # Add <answer> tag to the bare-numeric form so maybe_to_unit_mcq can
         # cleanly strip the tail when converting.
         question = question + " Place the answer in <answer>...</answer>."
         ans_str = str(gt)
-        # 2026-05-04 WeMath alignment: 50% → 5-way MCQ with E="No correct
+        # 2026-05-04 exam alignment: 50% → 5-way MCQ with E="No correct
         # answer" + "cm²" unit (area).
         unit_rng = random.Random((self.seed or 0) * 17 + 5071)
-        question, ans_str = maybe_to_wemath_mcq(
+        question, ans_str = maybe_to_unit_mcq(
             question, ans_str, unit_rng, prob=0.5, unit="cm²", n_options=5)
         return question, ans_str, image
 

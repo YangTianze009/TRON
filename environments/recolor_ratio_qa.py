@@ -2,7 +2,7 @@
 Recolor Ratio QA (D40, P3).
 
 Reference task:
-  qid 51 (ES float): "How many black squares need to be coloured in white,
+  an external reference (ES float): "How many black squares need to be coloured in white,
    so that there are exactly fourth as many black squares as there are
    white squares?" Ans: 9.
 

@@ -39,7 +39,7 @@ class SpinnerProbabilityQA(StandaloneVisualEnv):
     BENCHMARK_NUM_TOLERANCE_ABS = 0.001
 
     def _level_config(self, level: int) -> Dict:
-        # Aligned with DynaMath D116/161/162: ask "more likely color/number".
+        # Aligned with a math benchmark D116/161/162: ask "more likely color/number".
         # "probability_value" mode (which asked for a simplified fraction) was
         # invented and not present in the source benchmark — removed.
         level = max(0, min(level, 9))

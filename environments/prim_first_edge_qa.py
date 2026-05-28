@@ -5,7 +5,7 @@ spanning tree by Prim's algorithm. Ties are broken in alphabetical order
 on the edge label (each label is its two endpoint letters in
 alphabetical order).
 
-Mirrors qid 152 wording from the source distribution:
+Mirrors an external reference wording from the source distribution:
   "what is the first edge added to the MST when running Prim's
    Algorithm from node A? In the case of a tie, choose the edge which
    comes first in alphabetical order."

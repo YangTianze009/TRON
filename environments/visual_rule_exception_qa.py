@@ -1,7 +1,7 @@
 """
 Visual Rule Exception QA environment (v3 planning env 58).
 
-Targets VisuLogic Attribute Reasoning. A row of 6-10 figures
+Targets a logic benchmark Attribute Reasoning. A row of 6-10 figures
 is drawn that all follow a shared rule EXCEPT one. The model must identify
 the exception figure, labeled A-J. MCQ with 4 options: the correct exception
 letter and 3 distractor letters.

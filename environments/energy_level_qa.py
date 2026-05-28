@@ -5,7 +5,7 @@ Draws horizontal energy levels with transition arrows between them.
 Questions about energy differences, transition types, counting
 possible transitions. Covers electron shells, molecular orbitals,
 and reaction energy profiles.
-Targets: MMStar science diagrams, MMMU physics/chemistry.
+Targets: a multimodal benchmark science diagrams, MMMU physics/chemistry.
 """
 
 import math

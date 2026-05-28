@@ -1,7 +1,7 @@
 """
 Markov Chain Transition Probability QA (D117, P3 — reference statistics).
 
-Reference qid 72:
+Reference an external reference:
   "According to the markov chain shown in the image, what is the
    probability of the event 'A to B'?"  Ans: 0.1
 

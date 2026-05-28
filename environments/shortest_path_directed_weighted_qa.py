@@ -3,7 +3,7 @@ Shortest path on a directed weighted graph: given a graph drawn with
 arrows + edge weight labels, output the length of the shortest path
 from a labelled source S to a labelled target T.
 
-Mirrors qid 136 wording from the source distribution:
+Mirrors an external reference wording from the source distribution:
   "What is the shortest distance from node S to node G in this directed
    graph?  Ans: 29."
 

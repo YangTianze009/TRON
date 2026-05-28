@@ -5,7 +5,7 @@ Template: region_counting_qa.py.
 
 Goal: count the number of disjoint regions a set of straight lines
 divides a unit square into. Targets counting 
-and VisuLogic Attribute Reasoning (region-count as attribute).
+and a logic benchmark Attribute Reasoning (region-count as attribute).
 
 Difficulty schedule (multi-axis, continuous):
   Axis 1 (primary): n_lines = 2 + level // 2        -> 2..6

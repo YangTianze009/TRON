@@ -2,7 +2,7 @@
 Projectile Compare QA (D92, P2).
 
 Reference task:
-  qid 275 (HS MCQ): "Ball 1 and ball 2 follow the paths shown, where the
+  an external reference (HS MCQ): "Ball 1 and ball 2 follow the paths shown, where the
    darkblue path is Ball 1 and the green path is Ball 2. Which ball is in
    the air for a longer time? Assume that you can ignore air resistance for
    this problem. choice: (A) Ball 1 (B) Ball 2 (C) The amount time of balls

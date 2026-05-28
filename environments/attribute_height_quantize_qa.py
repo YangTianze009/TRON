@@ -1,7 +1,7 @@
 """
 Attribute Height Quantize QA environment.
 
-Targets PuzzleVQA `rectangle_height_number` (Δ=−12.0, SINGLE BIGGEST regression).
+Targets a puzzle benchmark `rectangle_height_number` (Δ=−12.0, SINGLE BIGGEST regression).
 
 Shows a horizontal row of 3-8 rectangles of varying heights.  Heights are
 drawn from 3 discrete clusters (short / medium / tall) and mapped to the
@@ -34,7 +34,7 @@ from PIL import Image
 
 from .standalone_base import StandaloneVisualEnv
 
-# Pastel / "PuzzleVQA-matching" rectangle fills
+# Pastel / "reference-style" rectangle fills
 _FILL_PALETTE = [
     "#a8e6cf",  # pastel green (the benchmark default)
     "#ffd3b6",  # pastel orange

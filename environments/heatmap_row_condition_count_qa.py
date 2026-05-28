@@ -32,7 +32,7 @@ from .standalone_base import StandaloneVisualEnv
 # Each (rows, cols, scenario) bundle owns its own categorical vocabulary so the
 # generated chart looks like a real arXiv heatmap — e.g. countries × energy
 # sources ⇒ cells are "Yes/No"; states × food items ⇒ cells are "Yes/No";
-# methods × trials ⇒ cells encode performance categories. CharXiv X13
+# methods × trials ⇒ cells encode performance categories. a chart benchmark X13
 # samples ("How many countries only use renewable energy?") imply this kind
 # of binary/semantic encoding, NOT abstract "class A/B/C/D".
 _SCENARIOS = [
@@ -91,7 +91,7 @@ class HeatmapRowConditionCountQA(StandaloneVisualEnv):
     ENV_NAME = "heatmap_row_condition_count"
 
     def _level_config(self, level: int) -> Dict:
-        # K=2 always (binary categorical), matching CharXiv X13 style.
+        # K=2 always (binary categorical), matching a chart benchmark X13 style.
         # Level scales rows × cols for difficulty.
         level = max(0, min(level, 9))
         if level <= 1:
@@ -119,7 +119,7 @@ class HeatmapRowConditionCountQA(StandaloneVisualEnv):
     def _try(self, rng, np_rng, cfg):
         n_rows = cfg["n_rows"]
         n_cols = cfg["n_cols"]
-        K = 2  # Binary categorical, CharXiv X13 style
+        K = 2  # Binary categorical, a chart benchmark X13 style
 
         scenario = rng.choice(_SCENARIOS)
         row_pool = list(scenario["rows"])
@@ -136,7 +136,7 @@ class HeatmapRowConditionCountQA(StandaloneVisualEnv):
         arr = np_rng.randint(0, K, size=(n_rows, n_cols))
 
         # We always count occurrences of class 0 (the "positive" class:
-        # Yes / Active / Pass) — matches CharXiv X13's "how many Xs do Y?".
+        # Yes / Active / Pass) — matches a chart benchmark X13's "how many Xs do Y?".
         target_class = 0
         class_names = scenario["classes"]
         positive_label = class_names[0]
@@ -144,7 +144,7 @@ class HeatmapRowConditionCountQA(StandaloneVisualEnv):
         row_noun_pl = scenario["row_noun_pl"]
         col_noun = scenario["col_noun"]
 
-        # Three CharXiv-style question variants (all output integer count).
+        # Three chart-style question variants (all output integer count).
         kind = rng.choice(["count_rows_all_positive",
                            "count_rows_at_col_positive",
                            "count_rows_shared_with_other"])

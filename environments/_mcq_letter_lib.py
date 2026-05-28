@@ -383,7 +383,7 @@ def maybe_to_mcq_letter(
     return new_q, letter
 
 
-def maybe_to_wemath_mcq(
+def maybe_to_unit_mcq(
     question: str,
     answer: Union[str, float, int],
     rng: random.Random,
@@ -391,7 +391,7 @@ def maybe_to_wemath_mcq(
     unit: Optional[str] = None,
     n_options: int = 4,
 ) -> Tuple[str, str]:
-    """WeMath-style MCQ wrapper. Probabilistically converts a numeric answer to
+    """exam-style MCQ wrapper. Probabilistically converts a numeric answer to
     a 4-5 option letter MCQ that mirrors the dominant reference surface format:
 
         Options: A. <val> <unit>; B. <val> <unit>; ...; E. No correct answer
@@ -427,7 +427,7 @@ def maybe_to_wemath_mcq(
             lambda m: f"{m.group(1)}{m.group(2)} {unit}",
             options_block,
         )
-    # Build option lines in the WeMath surface format ("A. val unit; B. ...")
+    # Build option lines in the exam-style surface format ("A. val unit; B. ...")
     parts = re.findall(r"\(([A-D])\)([^\(]+)", options_block)
     opt_lines = [f"{p[0]}. {p[1].strip()}" for p in parts]
     if n_options == 5:
@@ -483,6 +483,6 @@ def maybe_to_wemath_mcq(
 __all__ = [
     "make_mcq_letter",
     "maybe_to_mcq_letter",
-    "maybe_to_wemath_mcq",
+    "maybe_to_unit_mcq",
     "build_mcq_prompt_suffix",
 ]

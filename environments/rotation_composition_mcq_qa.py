@@ -1,7 +1,7 @@
 """
 Rotation Composition MCQ QA environment.
 
-# 2026-05-05 R5 P1: rewrite to match WeMath Q4, Q7, Q9, Q13 verbatim
+# 2026-05-05 R5 P1: rewrite to match a math benchmark Q4, Q7, Q9, Q13 verbatim
 # (Basic Transformations of Figures topic, base 72.11% step175 59.18%
 # delta -12.93). Stem opener "As shown in the diagram, ...", trailing
 # "(    )" marker, options separated by "; ", "No correct answer" as
@@ -12,13 +12,13 @@ Goal: teach 2D rotation-composition skill (spatial-vision 2DRotation
 
 Difficulty schedule (multi-axis, continuous):
   L0/L1: single_vertex_coord algebra MCQ (KEEP from R3 — works for 4B)
-  L2-L4: WeMath Q7-style — show shape A + 4 candidate rotated figures
+  L2-L4: a math benchmark Q7-style — show shape A + 4 candidate rotated figures
          labeled A,B,C,D in the diagram, options "A. B; B. C; C. D;
          D. No correct answer" (model picks which figure-letter is the
          correct rotation).
-  L5-L7: WeMath Q13-style — compose 2 transformations (rotate then
+  L5-L7: a math benchmark Q13-style — compose 2 transformations (rotate then
          translate, etc.). Same option format.
-  L8-L9: WeMath Q4/Q9-style — rotation about NAMED point O (marked on
+  L8-L9: a math benchmark Q4/Q9-style — rotation about NAMED point O (marked on
          both before and after panels), options name the rotation
          directly: "Rotate 90° clockwise; Rotate 90° counterclockwise; ...".
 """
@@ -90,7 +90,7 @@ class RotationCompositionMcqQA(StandaloneVisualEnv):
     ENV_NAME = "rotation_composition_mcq"
 
     # ------------------------------------------------------------------ #
-    # WeMath-style stems and option templates
+    # exam-style stems and option templates
     # ------------------------------------------------------------------ #
 
     # Q7-style stems (figure-MCQ): "What is the shape obtained by ...?"
@@ -243,7 +243,7 @@ class RotationCompositionMcqQA(StandaloneVisualEnv):
         return q, answer, img
 
     # ------------------------------------------------------------------ #
-    # L2-L4: WeMath Q7-style figure MCQ
+    # L2-L4: a math benchmark Q7-style figure MCQ
     # Shape A on left, 3 candidate figures labeled B, C, D on the right.
     # Options say "A. B; B. C; C. D; D. No correct answer" — meaning
     # option-letter A maps to figure-letter B, etc.
@@ -341,7 +341,7 @@ class RotationCompositionMcqQA(StandaloneVisualEnv):
         return question, answer, image
 
     # ------------------------------------------------------------------ #
-    # L5-L7: WeMath Q13-style composite (rotate + translate)
+    # L5-L7: a math benchmark Q13-style composite (rotate + translate)
     # ------------------------------------------------------------------ #
     def _gen_composite_mcq(self, rng, cfg, level):
         name, fn = rng.choice(_SHAPES)
@@ -434,7 +434,7 @@ class RotationCompositionMcqQA(StandaloneVisualEnv):
         return question, answer, image
 
     # ------------------------------------------------------------------ #
-    # L8-L9: WeMath Q4/Q9-style — rotation about NAMED point O
+    # L8-L9: a math benchmark Q4/Q9-style — rotation about NAMED point O
     # ------------------------------------------------------------------ #
     def _gen_named_point(self, rng, cfg, level):
         name, fn = rng.choice(_SHAPES)
@@ -472,7 +472,7 @@ class RotationCompositionMcqQA(StandaloneVisualEnv):
             options = [correct_text] + distractors[:2] + ["No correct answer"]
             rng.shuffle(options[:3])
             # Re-find idx (shuffled within first 3 only is wrong; shuffle all
-            # 4 except keep "No correct" last as in WeMath style)
+            # 4 except keep "No correct" last as in exam-style)
             # Actually the cleaner pattern: shuffle first 3 properly
             non_no = options[:3]
             rng.shuffle(non_no)

@@ -5,7 +5,7 @@ A small system of arithmetic equations is shown with several numeric blanks
 (rendered as `__`). The model must select which MCQ option (a tuple of
 integers) fills the blanks so that all equations hold.
 
-Reference qid 282:
+Reference an external reference:
   "Fill in the white spaces to make the equations work. choice: (A) 28, 1,
    0, and 37 (B) 1, 0, 27, and 37 (C) 38, −1, 1, 28." Ans: A.
 

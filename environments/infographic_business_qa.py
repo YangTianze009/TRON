@@ -137,7 +137,7 @@ class InfographicBusinessQA(StandaloneVisualEnv):
         else:
             result = self._gen_share_not_held(cfg, rng)
 
-        # 2026-05-04: LogicVista infographic actual benchmark always uses 5
+        # 2026-05-04: a logic benchmark infographic actual benchmark always uses 5
         # options A-E with E = "Cannot say" / "None of these" trap. ~15% of
         # benchmark questions have E as correct (genuinely unanswerable from
         # given data). Replicate that pattern.

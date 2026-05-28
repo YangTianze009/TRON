@@ -1,7 +1,7 @@
 """
 Multi-Attribute Partition QA environment (v3 planning env 55).
 
-Targets VisuLogic Attribute Reasoning and PuzzleVQA
+Targets a logic benchmark Attribute Reasoning and a puzzle benchmark
 rectangle_height_number. A set of 8-17 shapes is displayed,
 partitioned by a dashed boundary into two groups. Each shape varies across
 2-3 attributes (color, shape, size). The model must decide which set of

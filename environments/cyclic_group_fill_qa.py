@@ -2,7 +2,7 @@
 Cyclic Group Fill QA (D10).
 
 Reference task:
-  qid 82 (UG float): "There is a cycle graph of C6 in the image. Fill the
+  an external reference (UG float): "There is a cycle graph of C6 in the image. Fill the
    number in the empty slot so that it becomes the integers modulo 6 under
    addition (Z6)." Ans: 4.
 

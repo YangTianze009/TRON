@@ -2,12 +2,12 @@
 Set Operation on Lists QA (D1).
 
 Reference task:
-  qid 468 (HS MCQ): "What is the intersection of sets A and B?
+  an external reference (HS MCQ): "What is the intersection of sets A and B?
    A: [1, 4, 13]; B: [3, 7, 12, 15, 18]; C: [3, 5, 7, 10, 12, 15, 18];
    D: [5, 10]." Ans: A.
-  qid 469 (HS MCQ): "What is the union of sets A and B? ..." Ans: D.
-  qid 470 (HS MCQ): "Which elements are unique to set A? ..." Ans: B.
-  qid 473 (HS MCQ): "Which elements are unique to set B? ..." Ans: C.
+  an external reference (HS MCQ): "What is the union of sets A and B? ..." Ans: D.
+  an external reference (HS MCQ): "Which elements are unique to set A? ..." Ans: B.
+  an external reference (HS MCQ): "Which elements are unique to set B? ..." Ans: C.
 
 Renders two listed sets A and B (as image of "A = {...}, B = {...}"),
 asks for one of {union, intersection, set-diff A\\B, set-diff B\\A}, with

@@ -1,7 +1,7 @@
 """
 Binary Search Tree Operation QA (v3 planning batch, 2026-04-16).
 
-Target: reference graph_problems / VisualPuzzles algorithmic.
+Target: reference graph_problems / a puzzle benchmark algorithmic.
 Renders a BST as a node-link diagram. Questions ask about the result of
 an operation (search / insert / delete) on the tree — specifically:
   - L0-2: search (how many comparisons until a value is found)

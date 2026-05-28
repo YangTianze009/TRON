@@ -4,7 +4,7 @@ Periodic Table (Partial) QA environment.
 Draws a portion of the periodic table (2-3 rows x 4-6 columns) with
 atomic number, symbol, and atomic mass. Questions about element properties,
 comparisons, groups, electron counts.
-Targets: MMStar science diagrams, MMMU chemistry.
+Targets: a multimodal benchmark science diagrams, MMMU chemistry.
 """
 
 import math

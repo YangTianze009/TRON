@@ -1,6 +1,6 @@
 """
 Gantt chart QA — timeline reading, overlap detection, total duration.
-Targets: chart-reading, MMStar logical reasoning, diagram process diagrams.
+Targets: chart-reading, a multimodal benchmark logical reasoning, diagram process diagrams.
 Capabilities: V3+V9 (chart + flow), R1 (arithmetic), R5 (multi-step)
 """
 import random, math

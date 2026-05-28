@@ -3,7 +3,7 @@ Planar judge: given a small undirected graph, decide whether it is
 planar (drawable in the plane without edge crossings) and answer
 Yes/No.
 
-Mirrors qid 221 / 224 wording from the source distribution:
+Mirrors an external reference wording from the source distribution:
   "Is the following graph a planar graph? choice: (A) Yes (B) No.
    Ans: A."
 

@@ -4,7 +4,7 @@ Punnett Square QA environment.
 Draws 2x2 (monohybrid) or 4x4 (dihybrid) Punnett squares with parent
 genotypes and offspring cells. Questions about ratios, probabilities,
 dominant/recessive fractions.
-Targets: MMStar science diagrams, MMMU biology.
+Targets: a multimodal benchmark science diagrams, MMMU biology.
 """
 
 import math

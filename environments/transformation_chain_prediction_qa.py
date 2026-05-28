@@ -1,11 +1,11 @@
 """
 Transformation Chain Prediction QA.
 
-2026-05-05 R5 P1: REWRITE — match WeMath Basic Transformations verbatim
+2026-05-05 R5 P1: REWRITE — match a math benchmark Basic Transformations verbatim
 phrasing at L2+, KEEP existing single_vertex_coord algebra mode at L0/L1
 (this works for 4B per task instructions).
 
-WeMath patterns matched:
+a math benchmark patterns matched:
   - L0/L1 (UNCHANGED): single_vertex_coord algebra
     "The original point (a, b) is shown in the figure (red dot). Apply the
      transformation: <op>. What is the new coordinate?"
@@ -77,7 +77,7 @@ class TransformationChainPredictionQA(StandaloneVisualEnv):
         # L2-L4 — Q4 style single rotation around named point O
         if level <= 4:
             return {
-                "mode": "wemath_q4_single_rotation",
+                "mode": "exam_q4_single_rotation",
                 "shape_pool": ["triangle", "rectangle"],
                 "use_5_options": (level == 4),
                 "trap_rate": 0.0 if level <= 3 else 0.15,
@@ -85,7 +85,7 @@ class TransformationChainPredictionQA(StandaloneVisualEnv):
         # L5-L7 — Q12 style compound
         if level <= 7:
             return {
-                "mode": "wemath_q12_compound",
+                "mode": "exam_q12_compound",
                 "shape_pool": ["triangle", "rectangle"],
                 "use_5_options": False,
                 "trap_rate": 0.20,
@@ -93,7 +93,7 @@ class TransformationChainPredictionQA(StandaloneVisualEnv):
             }
         # L8-L9 — Q12 style with harder distractors + higher trap rate
         return {
-            "mode": "wemath_q12_compound",
+            "mode": "exam_q12_compound",
             "shape_pool": ["triangle", "rectangle", "l_shape"],
             "use_5_options": (level == 9),
             "trap_rate": 0.40,
@@ -111,7 +111,7 @@ class TransformationChainPredictionQA(StandaloneVisualEnv):
         for _ in range(20):
             if mode == "single_vertex_coord":
                 r = self._gen_single_vertex_coord(rng, cfg)
-            elif mode == "wemath_q4_single_rotation":
+            elif mode == "exam_q4_single_rotation":
                 r = self._gen_q4_single_rotation(rng, cfg)
             else:
                 r = self._gen_q12_compound(rng, cfg)
@@ -198,7 +198,7 @@ class TransformationChainPredictionQA(StandaloneVisualEnv):
         return q, answer, img
 
     # ------------------------------------------------------------------ #
-    # L2-L4 — WeMath Q4 style single rotation around named point O
+    # L2-L4 — a math benchmark Q4 style single rotation around named point O
     # Verbatim Q4: "As shown in the diagram, by rotating around the
     #               endpoint O, how can shape A be transformed into shape B?
     #               A. Rotate 90° clockwise; B. Rotate 90° counterclockwise;
@@ -274,7 +274,7 @@ class TransformationChainPredictionQA(StandaloneVisualEnv):
         return question, correct_letter, image
 
     # ------------------------------------------------------------------ #
-    # L5-L9 — WeMath Q12 style compound (rotate around named pivot + translate)
+    # L5-L9 — a math benchmark Q12 style compound (rotate around named pivot + translate)
     # ------------------------------------------------------------------ #
     def _gen_q12_compound(self, rng, cfg):
         shape_type = rng.choice(cfg["shape_pool"])

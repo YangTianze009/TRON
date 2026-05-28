@@ -1,5 +1,5 @@
 """
-Color Grid Pattern QA (Task C, PuzzleVQA color_grid gap, ).
+Color Grid Pattern QA (Task C, a puzzle benchmark color_grid gap, ).
 
 Colored grid cells with a pattern rule. Ask which cell breaks the pattern
 or what the missing cell's color should be.

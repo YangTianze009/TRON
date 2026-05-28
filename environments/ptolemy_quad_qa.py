@@ -2,7 +2,7 @@
 Ptolemy's Theorem on a Cyclic Quadrilateral QA (D55, P3 — reference plane
 geometry).
 
-Reference qid 32:
+Reference an external reference:
   "Let ABCD be a cyclic convex quadrilateral, AD = 1, DC = 6, BC = 7,
    AB = 8. Determine the value of AC * BD."  Ans: 55
 

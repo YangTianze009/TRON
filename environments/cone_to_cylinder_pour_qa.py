@@ -81,7 +81,7 @@ class ConeToCylinderPourQA(StandaloneVisualEnv):
         # tolerance behavior is unchanged).
         # 2026-05-04 R3: benchmark-sample-driven harden — at L9 require
         # 2-decimal ratio (e.g. 5.33 instead of 5.3) so off-by-one in the
-        # final round step gives wrong answer. WeMath samples like Q5
+        # final round step gives wrong answer. a math benchmark samples like Q5
         # ("113.04 cm³") use 2-decimal precision routinely.
         if level == 9:
             return {

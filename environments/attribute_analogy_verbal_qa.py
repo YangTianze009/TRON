@@ -1,7 +1,7 @@
 """
 Attribute Analogy Verbal QA (batch 3, 2026-04-14).
 
-Target: VisualPuzzles analogical / VisuLogic Stylistic / PuzzleVQA shape_morph.
+Target: a puzzle benchmark analogical / a logic benchmark Stylistic / a puzzle benchmark shape_morph.
 "A : B :: C : ?" — a pair of figures on the left and a single figure on
 the right with "?" for the answer, plus 4 candidate options.
 

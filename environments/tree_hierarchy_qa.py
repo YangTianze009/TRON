@@ -1,6 +1,6 @@
 """
 Tree/hierarchy diagram QA — weighted tree aggregation, org chart reasoning.
-Targets: diagram (hierarchical diagrams), MMStar logical reasoning.
+Targets: diagram (hierarchical diagrams), a multimodal benchmark logical reasoning.
 
 Capabilities: V9 (arrow/flow parsing), R1 (arithmetic), R5 (multi-step)
 

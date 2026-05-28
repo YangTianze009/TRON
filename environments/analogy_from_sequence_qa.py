@@ -5,7 +5,7 @@ A sequence S1, S2, S3 (and optionally S4, S5) showing a progressive
 transformation; then a new image C is shown and the same rule must be
 applied once to produce "?".
 
-Target: VisualPuzzles analogical,
+Target: a puzzle benchmark analogical,
 reference inductive.
 
 Redesign notes (v3):

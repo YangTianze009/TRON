@@ -32,7 +32,7 @@ from io import BytesIO
 from .standalone_base import StandaloneVisualEnv
 
 
-# Match MM-HELIX Kukurasu prompt verbatim (idx=601, idx=602):
+# Match a puzzle benchmark Kukurasu prompt verbatim (idx=601, idx=602):
 # - Single-paragraph game rules (no 4-section headers).
 # - Row clues listed as `Row 1: x\nRow 2: y\n...`.
 # - Column clues listed as `Column 1: a\nColumn 2: b\n...`.

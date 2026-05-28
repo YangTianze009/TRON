@@ -1,7 +1,7 @@
 """
 Viewpoint Change Prediction QA (batch 3, 2026-04-14).
 
-Target: visual-perception Multi-view / MindCubeBench rotation. The model sees a top-down
+Target: visual-perception Multi-view / a spatial benchmark rotation. The model sees a top-down
 floor-plan view showing labelled boxes at known (x, y) positions. The
 question asks, "if you rotated the view 90° clockwise, what would be on
 your LEFT?" — an integer / letter short answer.

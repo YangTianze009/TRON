@@ -5,7 +5,7 @@ A:B :: C:? analogy where the A->B transformation includes a NOT / complement
 operation (fill toggle, color inversion, set complement, combined
 complement+rotation).
 
-Target: VisualPuzzles analogical + X5 (deductive reasoning).
+Target: a puzzle benchmark analogical + X5 (deductive reasoning).
 
 Difficulty axes:
   1. negation_type: L0-2 fill toggle, L3-5 color inversion, L6-7 set

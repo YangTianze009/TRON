@@ -2,9 +2,9 @@
 Tree Traversal Visit QA (D139, P1).
 
 Reference task:
-  qid 241: "Which node will be visited first if using pre-order DFS on the
+  an external reference: "Which node will be visited first if using pre-order DFS on the
            following tree graph?"  Ans: D
-  qid 243: "Which node will be secondly visited if using post-order DFS
+  an external reference: "Which node will be secondly visited if using post-order DFS
            on the following tree graph?"  Ans: E
 
 Generates a small labeled rooted tree (3-8 vertices, letter labels A-H).

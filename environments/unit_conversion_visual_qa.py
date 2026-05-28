@@ -199,10 +199,10 @@ class UnitConversionVisualQA(StandaloneVisualEnv):
         if len(distractors) < 3:
             return None
 
-        # 2026-05-04 WeMath alignment: 50% of seeds add a 5th E="No correct
+        # 2026-05-04 exam alignment: 50% of seeds add a 5th E="No correct
         # answer" option (matches reference's dominant 5-way MCQ surface
         # format). Correct letter unchanged because gt_r stays in A-D.
-        wemath_style = rng.random() < 0.5
+        exam_style = rng.random() < 0.5
         opts_vals = [gt_r] + distractors[:3]
         rng.shuffle(opts_vals)
         if opts_vals.count(gt_r) > 1:
@@ -217,7 +217,7 @@ class UnitConversionVisualQA(StandaloneVisualEnv):
             return f"{v:.2f} {dst_unit}"
 
         opt_strs = [fmt(v) for v in opts_vals]
-        if wemath_style:
+        if exam_style:
             opt_strs = opt_strs + ["No correct answer"]
 
         diagram_kind = rng.choice(cfg["diagram_pool"])

@@ -28,7 +28,7 @@ import numpy as np
 from PIL import Image
 
 from .standalone_base import StandaloneVisualEnv
-from ._mcq_letter_lib import maybe_to_wemath_mcq
+from ._mcq_letter_lib import maybe_to_unit_mcq
 
 class CompositePerimeterQA(StandaloneVisualEnv):
     ENV_NAME = "composite_perimeter"
@@ -269,10 +269,10 @@ class CompositePerimeterQA(StandaloneVisualEnv):
             ans_str = f"{gt:.2f}"
             tail = "Answer with a single decimal. Place the answer in <answer>...</answer>."
         q = f"{given} {ask} {tail}"
-        # 2026-05-04 WeMath alignment: 50% of seeds convert to 5-way MCQ with
+        # 2026-05-04 exam alignment: 50% of seeds convert to 5-way MCQ with
         # E="No correct answer" + cm-style unit (perimeter is length → "cm").
         unit_rng = random.Random((self.seed or 0) * 17 + 9931)
-        q, ans_str = maybe_to_wemath_mcq(
+        q, ans_str = maybe_to_unit_mcq(
             q, ans_str, unit_rng, prob=0.5, unit="cm", n_options=5)
         image = self._render(comp_info, given, ask, cfg)
         return q, ans_str, image

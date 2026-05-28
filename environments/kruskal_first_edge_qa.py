@@ -5,7 +5,7 @@ algorithm. Ties are broken in alphabetical order of the edge label,
 where each edge label is its two endpoint letters in alphabetical
 order (e.g. AS comes before BT, AE comes before AS).
 
-Mirrors qid 137 / 151 wording from the source distribution:
+Mirrors an external reference wording from the source distribution:
   "what is the first edge added to the MST when running Kruskal's
    Algorithm? In the case of a tie, choose the edge which comes first
    in alphabetical order i.e. if you had to choose between AS and AE,

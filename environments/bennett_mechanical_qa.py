@@ -1217,7 +1217,7 @@ class BennettMechanicalQA(StandaloneVisualEnv):
         # Three parcels suspended by ropes, each rope-attachment offset
         # differently from the parcel center.
         # Correct = most stable = rope attached at the very edge / highest point
-        # (per reference qid 428: the parcel with the highest pivot point above
+        # (per reference an external reference: the parcel with the highest pivot point above
         # its center of mass is the most stable).
         offsets = [
             (0.0, "center"),     # rope attached at center top
@@ -1438,7 +1438,7 @@ class BennettMechanicalQA(StandaloneVisualEnv):
 
     def _gen_helicopter_tilt(self, rng, cfg, level):
         # Helicopter must tilt to fly forward. The rotor must tilt the same
-        # direction as desired motion. From reference qid 432, ans: B = clockwise.
+        # direction as desired motion. From reference an external reference, ans: B = clockwise.
         # We render the helicopter with a "fly forward" arrow.
         direction = rng.choice(["forward", "backward"])
         # If forward → tilt nose down (clockwise from a side view).
@@ -2151,7 +2151,7 @@ class BennettMechanicalQA(StandaloneVisualEnv):
         # Two cogwheels with a rack between them. Rack moves; both cogwheels
         # rotate, but in OPPOSITE directions (rack contacts opposite sides).
         # If diameters differ → different angular velocities.
-        # Most pedagogically interesting case (reference qid 169): different
+        # Most pedagogically interesting case (reference an external reference): different
         # diameters → "Diff dir, diff vel" = D.
         # Randomize diameters: most often, different sizes → answer D.
         same_size = rng.random() < 0.30
@@ -2445,7 +2445,7 @@ class BennettMechanicalQA(StandaloneVisualEnv):
         return q, answer, img
 
     def _gen_bolt_cutter(self, rng, cfg, level):
-        # 5-option MCQ from reference qid 420: tight nut + spanner.
+        # 5-option MCQ from reference an external reference: tight nut + spanner.
         # Easiest = LONG spanner held at the FAR end of the handle (= maximum
         # mechanical advantage).
         opts = ["Long spanner held at the far end (longest moment arm)",

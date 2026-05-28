@@ -1,7 +1,7 @@
 """
-Structural Pattern 3x3 QA (v4 G20, for PuzzleVQA regression).
+Structural Pattern 3x3 QA (v4 G20, for a puzzle benchmark regression).
 
-Targets: PuzzleVQA regressions
+Targets: a puzzle benchmark regressions
   - size_grid
   - color_grid
   - polygon_sides_color

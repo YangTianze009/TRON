@@ -1,7 +1,7 @@
 """
 Attribute Ordering QA environment (v3 planning env 56).
 
-Targets VisuLogic Attribute Reasoning. Shows 4-8 figures
+Targets a logic benchmark Attribute Reasoning. Shows 4-8 figures
 (labeled A, B, C, ...) that vary in a quantifiable attribute: height, side
 count, fill shade, or internal-line count. The model must order the figures
 by the asked attribute from least to most, picking the correct ordering

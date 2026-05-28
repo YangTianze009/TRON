@@ -2,7 +2,7 @@
 Differentiable At Point Judgment QA (D19-add).
 
 Reference task:
-  qid 78 (UG MCQ): "Is the function differentiable at x = 0? choice: (A) Yes
+  an external reference (UG MCQ): "Is the function differentiable at x = 0? choice: (A) Yes
    (B) No." Ans: A.
 
 Renders a function curve on a plot with a marked vertical line at x = c.

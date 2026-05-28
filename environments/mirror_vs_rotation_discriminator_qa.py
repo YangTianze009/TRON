@@ -1,7 +1,7 @@
 """
 Mirror vs Rotation Discriminator QA environment.
 
-# 2026-05-05 R5 P1: rewrite to match WeMath Q1, Q4, Q9 verbatim
+# 2026-05-05 R5 P1: rewrite to match a math benchmark Q1, Q4, Q9 verbatim
 # (Basic Transformations of Figures topic, base 72.11% step175 59.18%
 # delta -12.93). Stem opener "As shown in the diagram, ...", trailing
 # "( )" / "(    )" marker, options separated by "; ", "No correct
@@ -104,7 +104,7 @@ class MirrorVsRotationDiscriminatorQA(StandaloneVisualEnv):
     BENCHMARK_NUM_TOLERANCE_ABS = 0.001
     ENV_NAME = "mirror_vs_rotation_discriminator"
 
-    # WeMath Q1-style stems for direction
+    # a math benchmark Q1-style stems for direction
     _Q1_STEMS = [
         "As shown in the diagram, shape B is shape A rotated {ang}° around point O ( ).",
         "As shown in the diagram, by rotating around point O by {ang}°, how is shape A transformed into shape B? ( )",
@@ -185,7 +185,7 @@ class MirrorVsRotationDiscriminatorQA(StandaloneVisualEnv):
         return None
 
     # ------------------------------------------------------------------ #
-    # L0/L1: WeMath Q1 verbatim — CW vs CCW direction
+    # L0/L1: a math benchmark Q1 verbatim — CW vs CCW direction
     # ------------------------------------------------------------------ #
     def _gen_direction_q1(self, rng, cfg, level):
         name, fn = rng.choice(_SHAPES)

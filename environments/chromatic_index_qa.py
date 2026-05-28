@@ -3,7 +3,7 @@ Chromatic index χ'(G): given a small undirected graph (4–8 vertices),
 output the minimum number of colors needed to color the EDGES such
 that no two adjacent edges share a color.
 
-Mirrors qid 233 / 234 / 235 wording from the source distribution:
+Mirrors an external reference wording from the source distribution:
   "Find the chromatic index of the following graph.  Ans: 5 / 2 / 3."
 
 By Vizing's theorem, χ'(G) is either Δ(G) (max degree, "class 1") or

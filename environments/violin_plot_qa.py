@@ -83,7 +83,7 @@ class ViolinPlotQA(StandaloneVisualEnv):
         groups = groups_pool[:n]
 
         # Pick a single y-axis quantity now so the chart label and the
-        # question phrasing AGREE (CharXiv X30 samples like "Compare the
+        # question phrasing AGREE (a chart benchmark X30 samples like "Compare the
         # median firm-product exports..." imply the chart actually labels
         # the y-axis "exports").
         y_label = rng.choice(_Y_LABELS)
@@ -162,7 +162,7 @@ class ViolinPlotQA(StandaloneVisualEnv):
         ax.set_xticks(list(range(1, n + 1)))
         ax.set_xticklabels(groups, fontsize=style["font_size_base"],
                            rotation=15)
-        # y-axis label matches the question's noun (CharXiv-style: y axes
+        # y-axis label matches the question's noun (chart-style: y axes
         # carry the actual variable name, not a generic "Value"). Capitalize
         # for chart aesthetics.
         ax.set_ylabel(y_label.capitalize(),

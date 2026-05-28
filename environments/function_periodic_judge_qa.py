@@ -2,7 +2,7 @@
 Function Periodic Judgment QA (D14-add).
 
 Reference task:
-  qid 6 (HS MCQ): "Is this a periodic function? Choices: (A) Yes (B) No."
+  an external reference (HS MCQ): "Is this a periodic function? Choices: (A) Yes (B) No."
   Ans: A.
 
 Renders a function curve on a plot. Asks Yes/No whether it is periodic.

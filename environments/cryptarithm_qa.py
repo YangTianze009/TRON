@@ -1,5 +1,5 @@
 """
-Cryptarithm (alphametic / cryptomath) puzzle — matches MM-HELIX CryptoMath
+Cryptarithm (alphametic / cryptomath) puzzle — matches a puzzle benchmark CryptoMath
 benchmark prompt format.
 
 Benchmark prompt verbatim (idx=271, idx=272):

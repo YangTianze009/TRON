@@ -2,11 +2,11 @@
 Simpson's / Trapezoidal Rule Numerical Integration QA (D45, P3 — reference
 arithmetic).
 
-Reference qid 202:
+Reference an external reference:
   "what is the Simpson's approximation of the integral of f(x) from 1 to 4?"
   Ans: 154.0
 
-reference qid 201 verbatim (sibling, trapezoidal):
+reference an external reference verbatim (sibling, trapezoidal):
   "what is the trapezoidal approximation of the integral of f(x) from 1 to 5?"
   Ans: 264.0
 

@@ -5,8 +5,8 @@ A:B :: C:? where B differs from A in 2-3 attributes simultaneously
 (e.g., color + shape + size). Each attribute change follows a rule.
 Distractors at high levels get all but one attribute right.
 
-Target: VisualPuzzles analogical,
-VisuLogic Attribute Reasoning.
+Target: a puzzle benchmark analogical,
+a logic benchmark Attribute Reasoning.
 
 Difficulty axes:
   1. n_dimensions = 2 (L0-3) or 3 (L4-9).

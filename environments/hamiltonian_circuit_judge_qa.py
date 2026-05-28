@@ -1,11 +1,11 @@
 """
 Yes/No Hamiltonian circuit detection on a small undirected graph.
-Reference qid 227: "Is the following graph containing a Hamiltonian
+Reference an external reference: "Is the following graph containing a Hamiltonian
 circuit? choice: (A) Yes (B) No."
 
 Mapping: D136 (reference gt — Hamiltonian circuit Y/N).
 Studied qids (≥10): 227, 226 (Euler), 228, 220, 142, 120, 42, 221, 224, 223,
-222, 225, 231, 232. Sample-derived design choice: reference qid 227 phrases
+222, 225, 231, 232. Sample-derived design choice: reference an external reference phrases
 the question as MCQ "(A) Yes (B) No" — so my answer is letter A or B (no
 free-form). Graph rendering uses circular vertex layout to mirror reference's
 graph theory image style (vertices as labeled circles, edges as straight

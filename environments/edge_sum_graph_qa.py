@@ -5,7 +5,7 @@ A small undirected graph is drawn with integer labels at each vertex and
 labels on the edges. Each edge label = sum of the two endpoint vertex
 values. One edge label is replaced with `?`. Find the missing edge label.
 
-Reference qid 196:
+Reference an external reference:
   "The sum of the numbers at the two vertices at the ends of each edge is
    equal to the number written on that edge. What number should he write
    on the edge marked with the question mark?" Ans: 3.

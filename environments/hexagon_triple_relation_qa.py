@@ -1,9 +1,9 @@
 """
-Hexagon Triple Relation QA (v4 G21b, for PuzzleVQA color_number_hexagon).
+Hexagon Triple Relation QA (v4 G21b, for a puzzle benchmark color_number_hexagon).
 
 Targets:
-  - PuzzleVQA color_number_hexagon -7
-  - PuzzleVQA polygon_sides_color -10
+  - a puzzle benchmark color_number_hexagon -7
+  - a puzzle benchmark polygon_sides_color -10
 
 Task: 6 hexagons arranged in a ring; each hexagon has (color, number)
 combination following a rule. One hexagon is missing one attribute.

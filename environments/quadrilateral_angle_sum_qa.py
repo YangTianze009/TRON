@@ -43,7 +43,7 @@ class QuadrilateralAngleSumQA(StandaloneVisualEnv):
     ENV_NAME = "quadrilateral_angle_sum"
     TEXTBOOK_POSTPROCESS = True  # v4 B1: textbook-scan filter (~30% of rollouts)
 
-    # 2026-05-04 R4: full-gradient redesign per mmmath/wemath quadrilateral.
+    # 2026-05-04 R4: full-gradient redesign per a math benchmark quadrilateral.
     # L0-L1: trivial general quad with 3 angles given (1-step subtract from 360)
     # L2-L3: parallelogram (use opp-equal / supp rule, 1-step)
     # L4-L5: trapezoid + kite (1-step with shape-specific rule)

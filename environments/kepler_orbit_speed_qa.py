@@ -2,7 +2,7 @@
 Kepler Orbit Speed QA (D93, P2).
 
 Reference task:
-  qid 279 (HS MCQ): "Two planets travel in an elliptical orbit about the
+  an external reference (HS MCQ): "Two planets travel in an elliptical orbit about the
    sun as shown. Which planet have greater orbital speed? choice: (A) Blue
    planet (B) Orange planet (C) Both two planet have the same speed."
    Ans: B.

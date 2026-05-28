@@ -118,7 +118,7 @@ def _rule_top_row_circles():
 
 def _rule_blue_triangles_each_bottom_lines():
     """Each of the bottom two rows contains at least one triangle.
-    (Mirrors qid 5 reasoning: 'Blue triangles in each of the two bottom lines.')
+    (Mirrors an external reference reasoning: 'Blue triangles in each of the two bottom lines.')
     """
     def sample(rng):
         g = _empty_grid()

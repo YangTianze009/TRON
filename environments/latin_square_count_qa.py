@@ -6,7 +6,7 @@ each digit exactly once). One empty cell is marked with `x`. Question:
 "How many distinct digit values can replace `x` (across all valid
 completions of the rest of the grid)?"
 
-Reference qid 315:
+Reference an external reference:
   "Write the numbers 1, 2, 3, 4, 5 in the square 5x5 in such a way that
    every row and every column has each number. How many kinds of number
    can be put to replace 'x'?" Ans: 3.

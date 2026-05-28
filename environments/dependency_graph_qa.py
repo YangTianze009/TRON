@@ -1,6 +1,6 @@
 """
 Dependency/task graph QA — critical path, parallel execution, scheduling.
-Targets: diagram (flow diagrams), MMStar logical reasoning.
+Targets: diagram (flow diagrams), a multimodal benchmark logical reasoning.
 
 Capabilities: V9 (arrow/flow parsing), R1 (arithmetic), R5 (multi-step)
 """

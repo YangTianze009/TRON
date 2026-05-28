@@ -2,7 +2,7 @@
 Latin Square Fill QA (D41).
 
 Reference task:
-  qid 319 (ES float): "In the grid, how many dark blue squares have to be
+  an external reference (ES float): "In the grid, how many dark blue squares have to be
    coloured white, so that in each row and each column there is exactly one
    dark blue square? If it is impossible that in each row and each column
    there is exactly one dark blue square, answer 0." Ans: 10.

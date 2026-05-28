@@ -6,7 +6,7 @@ present a claim about line dominance, e.g.:
   - "Line A is greater than Line B in every period."
   - "Line A is greater than Line B in at least one period."
 
-Model output: lowercase single word `yes` or `no` (CharXiv-style binary).
+Model output: lowercase single word `yes` or `no` (chart-style binary).
 """
 import math
 import random

@@ -1,7 +1,7 @@
 """
 Sorting Network Trace QA (v3 planning batch, 2026-04-16).
 
-Target: reference algorithm_problems / VisualPuzzles algorithmic.
+Target: reference algorithm_problems / a puzzle benchmark algorithmic.
 Renders a sorting network (N horizontal wires + vertical comparators).
 The model is given the input values on the left of the wires and is asked
 to report the value on a specific wire after all comparators have been

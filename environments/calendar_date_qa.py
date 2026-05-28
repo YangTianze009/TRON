@@ -1,7 +1,7 @@
 """
 Calendar Date QA (D35, P1).
 
-Reference qid 342 — calendar date / weekday lookup.
+Reference an external reference — calendar date / weekday lookup.
 
 Renders a monthly calendar (with month name and year) where the dates are
 laid out in standard 7-column grid (Sunday or Monday first). One date is
