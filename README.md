@@ -1,14 +1,30 @@
 # TRON: Targeted Rule-verifiable Online eNvironments
 
 Environment code release for the paper
-**"TRON: Targeted Rule-Verifiable Online Environments for Visual Reasoning RL"**
-(Yang*, Shi*, Sun, Huang, Liu, Sun — University of Georgia).
+**"TRON: Targeted Rule-Verifiable Online Environments for Visual Reasoning RL"**.
+
+**Authors** (\* = equal contribution):
+Tianze Yang\*, Yucheng Shi\*, Ruitong Sun, Jingyuan Huang, Ninghao Liu, Jin Sun
+
+**Affiliation:** School of Computing, University of Georgia, Athens, GA, USA
+
+---
+
+![TRON overview](assets/tron_overview.png)
 
 TRON is a suite of **520 procedurally generated visual reasoning environments**.
 Each environment is a generator–verifier pair: the generator samples a fresh
 latent visual state, renders an image, and constructs a question; the verifier
 checks the model's answer against the deterministic ground truth derived from
 the same state. There is no fixed dataset — each call produces a new instance.
+
+The figure above sketches the full pipeline: (1) **Constructing Environment** —
+authors write one rule-verifiable generator–verifier program per environment;
+(2) **Generate Training Unit** — at training time, each environment is invoked
+with a seed and a difficulty level to produce a fresh `(image, question,
+answer)` triple, which is scored by the verifier; (3) **DAPO RL** — the same
+520-environment substrate trains both a single **full TRON model** and five
+**per-bucket ability specialists**.
 
 ## Suite composition (5 ability buckets)
 
