@@ -1,7 +1,6 @@
-# TRON: Targeted Rule-verifiable Online eNvironments
+# TRON: Targeted Rule-Verifiable Online Environments for Visual Reasoning RL
 
-Environment code release for the paper
-**"TRON: Targeted Rule-Verifiable Online Environments for Visual Reasoning RL"**.
+Environment code release for the paper of the same name.
 
 **Authors:** Tianze Yang\*, Yucheng Shi\*, Ruitong Sun, Jingyuan Huang, Ninghao Liu, Jin Sun
 

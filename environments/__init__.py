@@ -1,4 +1,4 @@
-"""TRON: Targeted Rule-verifiable Online eNvironments.
+"""TRON: Targeted Rule-Verifiable Online Environments for Visual Reasoning RL.
 
 This package contains the 520 procedural visual reasoning environments
 described in the TRON paper. Each environment is a generator-verifier
